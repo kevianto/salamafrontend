@@ -95,11 +95,16 @@ export const Registration: React.FC<RegistrationProps> = ({ onRegister, showToas
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-teal-50 flex items-center justify-center p-4">
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500 to-teal-500 rounded-2xl mb-4">
-            <Navigation className="w-8 h-8 text-white" />
+          <div className="inline-flex items-center justify-center w-20 h-20  rounded-2xl mb-4">
+            <img
+           src="https://res.cloudinary.com/daxghemr4/image/upload/v1753901755/SERFFRPJCZBOVE64DQYFYCJRCQ_qoayrg.jpg"
+                alt="FloodWatch Logo"
+               className="w-full h-full rounded-2xl "
+             />
+
           </div>
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">Flood Monitor</h1>
-          <p className="text-gray-600">Register to start monitoring your area</p>
+          <h1 className="text-3xl font-bold text-gray-900 mb-2">FloodWatch</h1>
+          <p className="text-gray-600">Update your profile to start monitoring your area</p>
         </div>
 
         <div className="bg-white/80 backdrop-blur-lg rounded-3xl shadow-xl p-8 border border-white/20">
@@ -125,13 +130,15 @@ export const Registration: React.FC<RegistrationProps> = ({ onRegister, showToas
                   <Phone size={16} />
                   Phone Number
                 </label>
-                <input
+             <input
                   type="tel"
+                  pattern="^(\+254|0)?7\d{8}$"
+                  title="Enter a valid Kenyan phone number (e.g., 07XXXXXXXX or +2547XXXXXXXX)"
                   value={formData.phone}
                   onChange={(e) => handleInputChange('phone', e.target.value)}
                   className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
-                  placeholder="Enter your phone number"
-                  required
+                 placeholder="e.g., 0712345678 or +254712345678"
+                 required
                 />
               </div>
 
@@ -204,7 +211,7 @@ export const Registration: React.FC<RegistrationProps> = ({ onRegister, showToas
               {loading ? (
                 <Loader2 className="w-5 h-5 animate-spin" />
               ) : null}
-              {loading ? 'Creating Account...' : 'Create Account'}
+              {loading ? 'Updating Profile...' : 'Update Profile  & Start Monitoring'}
             </button>
           </form>
         </div>

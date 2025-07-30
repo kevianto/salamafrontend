@@ -63,7 +63,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ onLogout, showToast }) => 
                 <Activity className="w-6 h-6 text-white" />
               </div>
               <div>
-                <h1 className="text-xl font-bold text-gray-900">Flood Monitor</h1>
+                <h1 className="text-xl font-bold text-gray-900">FloodWatch</h1>
                 <div className="flex items-center gap-2 text-sm text-gray-600">
                   <div className={`w-2 h-2 rounded-full ${isConnected ? 'bg-green-500' : 'bg-red-500'}`} />
                   {isConnected ? 'Connected' : 'Disconnected'}
